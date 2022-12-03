@@ -1,0 +1,103 @@
+1) npx create-react-app calc-app : Crear un proyecto react llamado calc-app
+
+2) npm start : Para inicar el servidor
+
+3) Carpetas :
+    > node_modules : donde estan las dependencias.
+    > public : index.html es el punto de entrada de nuesta app.
+    > src : donde vamos a estar tocando para que la app funcione
+
+4) Eliminamos todo lo que esta en src.
+
+5) Crear el index.js en src
+
+6) Impotar React : 
+    > import React from 'react';
+    > import ReactDOM from 'react-dom';
+
+7) ReactDOM.render(p1,p2) : hace que la app se renderice
+    > p1 : lo que quiero renderizar
+    > p2 : donde lo quiero renderizar
+
+8) jsx para archivos que no tengan JS plano. 
+
+9) JSX es parecido a el html pero tiene JS
+
+10) La idea es trabajar con componentes. Por cada archio, un componmente.
+
+11) Generar archivos:
+    > Nombre: 1ra letra en mayuscula
+    > Partes: 
+        - Importacion
+        - Generar función del componmente (arrow comun)
+        - Exportar componente
+    > Función tienen que ser igual al nombre del archivo
+    > Exportar por dafault es lo normal
+
+12) Exportar un componente:
+    > Nunca lleva la externción del archivo
+
+13) Crear un archivo css
+    > import './App.css' (apuntar directamiente al archivo)
+
+14) className es lo que seria class en html
+
+15) Agregar propiedade
+    > Con tan solo poner el nombre de la propiedad basta.
+    > para usar JS en react se puede hacer dentro {} "PERO" en una sola linea.
+
+16) Object Destructuring
+    > const person={id: 1, name: "Pedro", nick: "Bonzo"}
+    > const {id, name, nick} = person;
+
+17) Validacion de datos: npm i prop-types
+    > Result.propTypes = {
+        value: PropTypes.string.isRequired
+    }
+    > Datos default:
+        Result.defaultProps = {
+            value: "0"
+        } 
+
+18) Componente button: 
+    > clickHandler: función que se ejecuta cuando damos click.
+
+19) Cuando generemos listas dinamicas hay que usar key
+
+20) Hooks
+    > Función que se utiliza es const [text, setText] = useState("");
+        - Retonta el estado actual 
+        - Modificamos el estado con la otra duncion
+        - El contenido de text es actualizado con setText
+
+21) Template literals (concatenar)
+    > const text1 = "mundo"
+    > const helloW = `Hola ${text1}` => Hola mundo
+
+22) eval() evalua la cadena como si fuese codigo 
+
+23) RegExp()
+    > Para busacar una cadena de text especifico o dividir un string
+    > [^+^-^*^/]+/g
+
+24) Lodash
+    > Tabaja sobre numros, array, objetos...
+    > Permite procesarlos 
+    > solo uso 1 parte =>  npm i lodash.words
+
+25) Para ponerlo en productivo:
+    > instalar: npm i -g serve
+    > luego correr: npm run build 
+        - Reducion de los archivos
+        - Ve las compatibilidades  
+        - Import en forma estandar
+        - Elimina las dependencias
+    > juego corremos la app comprimida
+        - npm i serve-build
+        - serve -s build
+
+26) Deploy: Firebase-tools
+    > npm i -g firebase-tools
+    > firebase login (hay que logiar)
+    > firebase init
+        - 
